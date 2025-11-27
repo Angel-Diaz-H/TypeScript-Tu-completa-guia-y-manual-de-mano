@@ -3,6 +3,7 @@
         name: string,
         age?: number,
         powers: string[]
+        getName?: () => string
     } = {
         name: 'Barry Allen',
         age: 24,
@@ -14,14 +15,14 @@
         name: 'Clark Kent',
         // age: 60,
         powers: ['Super fuerza'],
-        
+
         // No es permitido 
-        getNombre(){
+        getName(){
             return this.name;
         }
     }
 
-    console.log(flash);
+    console.log(flash.getName?.());
 
     
 })();

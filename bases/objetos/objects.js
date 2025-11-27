@@ -9,11 +9,11 @@
         // age: 60,
         powers: ['Super fuerza'],
         // No es permitido 
-        getNombre() {
+        getName() {
             return this.name;
         }
     };
-    console.log(flash);
+    console.log(flash.getName?.());
 })();
 export {};
 //# sourceMappingURL=objects.js.map
