@@ -23,8 +23,14 @@
 
     const printAvenger = ({ ironman, ...resto }: Avengers) => {
         console.log(ironman);
-        console.log(resto.vision.toUpperCase());
+        console.log(resto);
     }
 
-    printAvenger(avenger);
+    // printAvenger(avenger);
+
+    // Destructuración de arreglos.
+    const avengersArr: [string, boolean, number] = ['Cap. América', true, 150.15];
+    const [capitan, ironman] = avengersArr;
+    console.log({ ironman, capitan });
+
 })();
