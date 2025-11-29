@@ -1,49 +1,12 @@
 "use strict";
-(() => {
-    let flash = {
-        name: 'Barry Allen',
-        age: 24,
-        powers: ['Super velocidad', 'Viajar en el tiempo'],
+var Valitations;
+(function (Valitations) {
+    Valitations.validateText = (text) => {
+        return text.length > 3 ? true : false;
     };
-})();
-(() => {
-    class Mutant {
-        mutantPower(id) {
-            return this.name + ' ' + this.realName;
-        }
-    }
-})();
-(() => {
-    ;
-    const client = {
-        name: 'Angel',
-        address: {
-            id: 125,
-            zip: 'KY432',
-            city: 'Ottawa'
-        },
-        getFullAddress(id) {
-            return this.address.city;
-        }
+    Valitations.validateDate = (myDate) => {
+        return (isNaN(myDate.valueOf())) ? false : true;
     };
-    const client2 = {
-        name: 'Melissa',
-        age: 30,
-        address: {
-            city: 'Miami',
-            id: 126,
-            zip: 'MI654',
-        },
-        getFullAddress(id) {
-            return this.address.city;
-        }
-    };
-})();
-(() => {
-    ;
-    let addNumbers;
-    addNumbers = (a, b) => {
-        return 10;
-    };
-})();
+})(Valitations || (Valitations = {}));
+console.log(Valitations.validateDate(new Date('2020-01-01')));
 //# sourceMappingURL=main.js.map
