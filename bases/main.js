@@ -39,4 +39,11 @@
         }
     };
 })();
+(() => {
+    ;
+    let addNumbers;
+    addNumbers = (a, b) => {
+        return 10;
+    };
+})();
 //# sourceMappingURL=main.js.map
