@@ -1,4 +1,4 @@
-import { printObject, genericFunction } from "./generics/generics";
+import { printObject, genericFunction, genericFunctionArrow } from './generics/generics';
 
 // printObject('123');
 // printObject(new Date());
@@ -7,5 +7,5 @@ import { printObject, genericFunction } from "./generics/generics";
 // printObject('Hola mundo!!!');
 
 console.log(genericFunction(123.1416).toFixed(2));
-console.log(genericFunction('Hola mundo!!!').toFixed(2));
-
+console.log(genericFunction('Hola mundo!!!').toLowerCase());
+console.log(genericFunctionArrow(new Date()).setTime(12));
