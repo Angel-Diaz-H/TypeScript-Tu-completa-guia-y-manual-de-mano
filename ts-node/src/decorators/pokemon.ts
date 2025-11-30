@@ -1,14 +1,21 @@
-function printToConsole(constructor: Function){
+function printToConsole(constructor: Function) {
     console.log(constructor);
-    
 }
 
-@printToConsole
-export class Pokemon{
+const printToConsoleConditional = (print: boolean = false): Function => {
+    if (print) {
+        return printToConsole;
+    } else {
+        return () => { };
+    }
+};
+
+@printToConsoleConditional(false)
+export class Pokemon {
 
     public publicApi: string = 'https://pokeapi.co';
     constructor(
         public name: string,
-    ){};
+    ) { };
 
 };
